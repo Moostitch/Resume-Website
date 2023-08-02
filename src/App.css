@@ -1,42 +1,213 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-color: #002265;
+  --secondary-color: #14279b;
+  --highlight-color: antiquewhite;
+
+  --text-primary-color: var(var(--primary-color));
+
+  --muted-color-100: azure;
+  --muted-color-200: rgb(166, 202, 202);
+  --font-1: "Inter", sans-serif;
+  --font-2: "Rajdhani", sans-serif;
+  --font-3: "Noto Serif", serif;
+  --font-4: "Staatliches", cursive;
+}
+
+body {
+  font-family: var(--font-2);
+  background-color: #002265;
+  color: white;
+}
+.App {
+  padding: 40px;
+}
+
+/* Header */
+.welcome {
+  font-size: 90px;
+}
+
+/* .header-section {
+  background-color: blanchedalmond;
+} */
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.navbar {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  align-items: center;
+  font-size: large;
+}
+
+a {
+  padding: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.main-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.message-about {
+  width: 50vw;
+  height: 50vh;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.message-about h2 {
+  font-size: 30px;
+  margin: 0 0 30px 0;
+}
+.message-about h1 {
+  font-size: 50px;
+  margin: 0 0 30px 0;
+}
+.message-about p {
+  font-size: 20px;
+}
+
+.image-about img {
+  width: 30vw;
+  height: 40vh;
+  margin: 10px;
+}
+
+/* Content */
+
+.passions-section,
+.portfolio-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 50vh;
+}
+
+.content h1,
+.footer h1 {
+  font-size: 40px;
+  color: white;
+}
+
+.passions-list,
+.portfolio-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 30vw;
+}
+
+.front-end,
+.back-end,
+.ux-ui,
+.job1,
+.job2,
+.website {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 350px;
+  height: 350px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px 7px rgba(3, 3, 3, 0.3);
+  background-color: bisque;
+}
+
+.detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 10px;
+}
+
+.passions-list h4,
+.portfolio-list h4 {
+  padding: 20px;
+  font-size: 30px;
+  color: black;
+}
+
+.detail p {
+  background-color: rgba(0, 128, 128, 2);
+  width: 90px;
+  height: 90px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: pre-line;
   text-align: center;
+  color: black;
+  font-family: var(--font-3);
+  font-size: small;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.detail-job {
+  background-color: rgba(0, 128, 128, 0.8);
+  width: 90px;
+  width: 320px;
+  height: 50px;
+  font-family: var(--font-3);
+  text-align: start;
+  padding: 10px;
+  border-radius: 3px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Footer */
+
+.footer {
+  margin: 30px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.contact-section {
+  width: 100vw;
+  height: 30vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-.card {
-  padding: 2em;
+.github,
+.email,
+.phone {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px;
 }
 
-.read-the-docs {
-  color: #888;
+.contact-section img {
+  width: 70px;
+  height: 80px;
+  margin: 20px;
 }
